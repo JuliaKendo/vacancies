@@ -90,3 +90,4 @@ def fetch_sj():
     table_instance = AsciiTable(TABLE_DATA, 'Superjob Moscow')
     table_instance.justify_columns[3] = 'right'
     return table_instance.table
+    
