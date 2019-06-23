@@ -12,13 +12,13 @@ def main():
     logging.info("Program started")
 
     try:
-        vacancies_hh = fetch_hh.get_vacancies_hh()
+        vacancies_hh = fetch_hh.fetch_hh()
         print(vacancies_hh)
     except requests.exceptions.HTTPError as error:
         logging.info("Не могу получить данные с сервера HeadHanter:\n{0}".format(error))
 
     try:
-        vacancies_sj = fetch_sj.get_vacancies_sj()
+        vacancies_sj = fetch_sj.fetch_sj()
         print(vacancies_sj)
     except requests.exceptions.HTTPError as error:
         logging.info("Не могу получить данные с сервера SuperJob:\n{0}".format(error))
