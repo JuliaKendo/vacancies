@@ -83,4 +83,3 @@ def fetch_hh():
     table_instance = AsciiTable(TABLE_DATA, 'HeadHanter Moscow')
     table_instance.justify_columns[3] = 'right'
     return table_instance.table
-      
