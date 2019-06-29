@@ -13,13 +13,16 @@ def main():
 
     try:
         vacancies_hh = fetch_hh.fetch_hh()
-        print(vacancies_hh)
+        jobs_table_hh = fetch_hh.show_job_statistics_hh(vacancies_hh)
+        print(jobs_table_hh)
     except requests.exceptions.HTTPError as error:
         logging.info("Не могу получить данные с сервера HeadHanter:\n{0}".format(error))
 
     try:
         vacancies_sj = fetch_sj.fetch_sj()
-        print(vacancies_sj)
+        jobs_table_sj = fetch_sj.show_job_statistics_sj(vacancies_sj)
+        print(jobs_table_sj)
+
     except requests.exceptions.HTTPError as error:
         logging.info("Не могу получить данные с сервера SuperJob:\n{0}".format(error))
 
